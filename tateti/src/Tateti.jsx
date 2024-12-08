@@ -9,7 +9,7 @@ function Tateti() {
 
   const handleGanador = (tablero) => {
     if (tablero[0] === tablero[1] && tablero[1] === tablero[2] && tablero[2] !== null) {
-      setGanador(tablero[0]); // Establecer el ganador
+      setGanador(tablero[0]);
       setControlador(true);    // Detener el juego
       return;
     }
