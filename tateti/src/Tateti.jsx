@@ -51,7 +51,7 @@ function Tateti() {
   }
 
   const handlePos = (pos) => {
-    if (controlador) {
+    if (controlador=== true) {
       return;
     }
     if (tablero[pos] === null) {
