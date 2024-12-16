@@ -1,1 +1,10 @@
 manejadores de evento array,usstate,userefno obligatorio, practica implementando el tateti,va a ser un juego a implementar,si lo logras hacer lo podes usar en el examen siempre y cuando lo puedas defender vos misma
+
+
+Tesoro:
+onclick p revelar su identidad (uno debe tapar y otro const revelar?)
+mensaje de victoria si logro encontrar algo
+celdas mostradas deben tener un color o simbolo diferente
+boton d reiniciar
+y se vuelvea poner en otro lugar el Tesoro
+

@@ -1,0 +1,30 @@
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.celda {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hidden {
+  background-color: #ccc; /* Color para celdas ocultas */
+}
+
+.revealed {
+  background-color: #e0e0e0; /* Color para celdas reveladas */
+}
+
+.treasure {
+  background-color: gold; /* Color para la celda con el tesoro */
+}

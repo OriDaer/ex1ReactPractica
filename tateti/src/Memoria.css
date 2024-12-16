@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Contenedor del juego */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(5, 100px); /* 5 columnas */
+  gap: 10px; /* Espacio entre las casillas */
+}
+
+/* Estilo de cada casilla */
+.contenedor div {
+  width: 100px;
+  height: 100px;
+  background-color: #4caf9e; /* Color de fondo inicial */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la casilla */
+}
+
+/* Efecto al pasar el mouse sobre una casilla */
+.contenedor div:hover {
+  background-color: #a0458b; /* Color más oscuro al pasar el mouse */
+}
+
+/* Casillas paresEncontrados */
+.contenedor div.parEncontrado {
+  background-color: #e4e77d; /* Color para las casillas parEncontrados */
+}
+
+/* Botón de reiniciar */
+button {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #f44336; /* Color rojo para el botón */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados para el botón */
+}
+
+button:hover {
+  background-color: #d32f2f; /* Color más oscuro al pasar el mouse sobre el botón */
+}
