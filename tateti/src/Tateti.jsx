@@ -8,7 +8,7 @@ function Tateti() {
   const [controlador, setControlador] = useState(false);
 
   const handleGanador = (tablero) => {
-    if (tablero[0] === tablero[1] && tablero[1] === tablero[2] && tablero[2] !== null) {
+    if (tablero[0] === tablero[1] && tablero[1] === tablero[2] && tablero[2] !== null) { 
       setGanador(tablero[0]);
       setControlador(true);    // Detener el juego
       return;
@@ -59,7 +59,6 @@ function Tateti() {
       nuevoTablero[pos] = ficha;
       setTablero(nuevoTablero);
       handleGanador(nuevoTablero);
-
       if (!nuevoTablero.includes(null) && !ganador) {
         setGanador('Empate');
         setControlador(true);

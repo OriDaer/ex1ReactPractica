@@ -1,25 +1,21 @@
 /* Estilo general para el cuerpo */
 body {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f8ff; /* Fondo suave */
+  background-color: #f0f8ff;
+  margin: 0;
 }
 
 /* Contenedor del juego */
 .contenedor {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 10px;
-  margin: 20px;
-  justify-items: center;
-  align-items: center;
-  background-color: #eda4d9; /* Fondo del tablero */
+  grid-template-columns: repeat(3, 100px); /* 3 columnas de 100px */
+  grid-template-rows: repeat(3, 100px); /* 3 filas de 100px */
+  gap: 5px; /* Espacio entre las celdas */
+  background-color: transparent;
   padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
 /* Estilo para cada celda del tablero */
@@ -30,28 +26,13 @@ body {
   width: 100px;
   height: 100px;
   font-size: 40px;
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: #eaf083; /* Fondo blanco para las celdas */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* Sombra leve para separación */
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s;
 }
 
 /* Efecto hover para las celdas */
 .contenedor div:hover {
   background-color: #f1f1f1;
-  transform: scale(1.1);
 }
-
-/* Estilo para los textos */
-h2 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 24px;
-  color: #0dbb58; /* Color llamativo para el ganador */
-}
-
-

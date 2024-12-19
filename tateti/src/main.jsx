@@ -4,9 +4,10 @@ import Tateti from './Tateti.jsx'
 import Tesoro from './Tesoro.jsx'
 import Memoria from './Memoria.jsx'
 import AdivinaNum from './AdivinaNum.jsx'
+import Tesoro2 from './Tesoro2.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AdivinaNum/>
+    <Tesoro2/>
   </StrictMode>,
 )

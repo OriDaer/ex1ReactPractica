@@ -10,7 +10,7 @@ function Tesoro() {
   [null, null, null, null, null],
   [null, null, null, null, null],
   [null, null, null, null, null]])
-  const [treasureLocation, setTreasureLocation] = useState({ x: 0, y: 0 })//coordenadas del Tesoro escondido
+  const [tesoroLocation, settesoroLocation] = useState({ x: 0, y: 0 })//coordenadas del Tesoro escondido
   const [gameOver, setGameOver] = useState(false)
   const [clickCount, setClickCount] = useState(0)
   //(gameover)Cuandoel juego termine, bloquea el tablero para evitar clics adicionales hastaque se reinicie.
@@ -23,10 +23,10 @@ function Tesoro() {
   const handleRandomLocation = () => {
     let x = Math.floor(Math.random() * 5);
     let y = Math.floor(Math.random() * 5);
-    setTreasureLocation({ x, y })
+    settesoroLocation({ x, y })
     console.log("Tesoro generado en:", { x, y });
   }
-  console.log(treasureLocation)
+  console.log(tesoroLocation)
 
   const handleReset = () => {
     setBoard([[null, null, null, null, null],
@@ -39,7 +39,7 @@ function Tesoro() {
       [false, false, false, false, false],
       [false, false, false, false, false],
       [false, false, false, false, false]])
-    setTreasureLocation({ x: 0, y: 0 })
+    settesoroLocation({ x: 0, y: 0 })
     setGameOver(false)
     setClickCount(0)
     handleRandomLocation()
@@ -54,7 +54,7 @@ function Tesoro() {
       return newRevealedCells;
     });
 
-    if (x === treasureLocation.x && y === treasureLocation.y) {
+    if (x === tesoroLocation.x && y === tesoroLocation.y) {
       setGameOver(true);
       console.log("¡Has encontrado el tesoro!");
     } else {
@@ -84,10 +84,10 @@ function Tesoro() {
                   return (
                     <div
                       key={indexC}
-                      className={`celda ${isRevealed ? (indexF === treasureLocation.x && indexC === treasureLocation.y ? 'treasure' : 'revealed') : 'hidden'}`}
+                      className={`celda ${isRevealed ? (indexF === tesoroLocation.x && indexC === tesoroLocation.y ? 'tesoro' : 'revealed') : 'oculto'}`}
                       onClick={() => handleCeldaClick(indexF, indexC)}
                     >
-                      {isRevealed && indexF === treasureLocation.x && indexC === treasureLocation.y ? 'T' : ''}
+                      {isRevealed && indexF === tesoroLocation.x && indexC === tesoroLocation.y ? 'T' : ''}
                     </div>
                   );
                 })
